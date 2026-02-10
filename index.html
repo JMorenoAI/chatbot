@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BS Detector</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <h1>🕵️ BS Detector</h1>
+        <p class="subtitle">Fact-check vibes for headlines, claims, and hot takes.</p>
+      </header>
+
+      <section class="card">
+        <h2>Claim Input</h2>
+        <textarea id="claimInput" rows="4" placeholder="Paste or type any claim to analyze..."></textarea>
+        <button id="analyzeBtn">Analyze Claim</button>
+      </section>
+
+      <section class="card hidden" id="resultsSection">
+        <h2>AI-Powered Analysis</h2>
+        <div class="meter-wrap">
+          <div class="meter-header">
+            <span>Legit</span>
+            <span>Total BS</span>
+          </div>
+          <div class="meter-track">
+            <div id="meterFill"></div>
+          </div>
+          <p id="meterLabel"></p>
+        </div>
+
+        <div class="breakdown-grid">
+          <article class="breakdown-card">
+            <h3>Red Flags</h3>
+            <ul id="redFlags"></ul>
+          </article>
+          <article class="breakdown-card">
+            <h3>Logical Fallacies</h3>
+            <ul id="fallacies"></ul>
+          </article>
+          <article class="breakdown-card">
+            <h3>Missing Context</h3>
+            <ul id="context"></ul>
+          </article>
+          <article class="breakdown-card">
+            <h3>Source Quality</h3>
+            <ul id="sources"></ul>
+          </article>
+        </div>
+
+        <div class="actions">
+          <button id="shareBtn">Share Results</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Check History</h2>
+        <p class="subtitle">Saved on your device.</p>
+        <ul id="historyList" class="history-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
